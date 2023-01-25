@@ -80,6 +80,8 @@ body .card {
   height: 82%;
   border-radius: 0.5rem;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 body .card .content {
   display: grid;
@@ -115,4 +117,30 @@ body .card .content .info .numberOf {
   color: hsla(0deg, 0%, 100%, 0.6);
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 600px) {
+  body .card {
+    flex-direction: row-reverse;
+    width: 70rem;
+    height: 28rem;
+  }
+  body .card .content {
+    flex: 50%;
+    padding: 4rem;
+    gap: 4rem;
+    padding-right: 6rem;
+    text-align: left;
+  }
+  body .card .content .heading {
+    font-size: 2.2rem;
+    font-family: "Inter", sans-serif;
+  }
+  body .card .content .details {
+    padding-right: 1rem;
+  }
+  body .card .content .info {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */

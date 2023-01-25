@@ -104,6 +104,8 @@ body {
         height: 82%;
         border-radius: 0.5rem;
         overflow: auto;
+        display: flex;
+        flex-direction: column;
 
         .content {
             display: grid;
@@ -146,6 +148,38 @@ body {
                 }
             }
             
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    body {
+        .card {
+            flex-direction: row-reverse;
+            width: 70rem;
+            height: 28rem;
+
+            .content {
+                flex: 50%;
+                padding: 4rem;
+                gap: 4rem;
+                padding-right: 6rem;
+                text-align: left;
+
+                .heading {
+                    font-size: 2.2rem;
+                    font-family: $font-family-1;
+                }
+
+                .details {
+                    padding-right: 1rem;
+                }
+
+                .info {
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
         }
     }
 }
