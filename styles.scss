@@ -86,10 +86,6 @@ $font-family-2: 'Lexend Deca', sans-serif;
 $fw-regular: 400;
 $fw-bold: 700;
 
-@mixin border {
-    border: 1px solid red;
-}
-
 
 body {
     background-color: $primary-color-very-dark-blue;
