@@ -74,14 +74,78 @@ $primary-color-very-dark-blue: hsl(233, 47%, 7%); //Main background
 $primary-color-dark-blue: hsl(244, 38%, 16%); //Card background
 $primary-color-soft-voilet: hsl(277, 64%, 61%); //Accent
 
-$white: hsl(0, 0%, 100%);  //(main heading, stats)
+$white: hsl(0, 0%, 100%); //(main heading, stats)
 $slightly-transparent-white-1: hsla(0, 0%, 100%, 0.75); //Main paragraph
 $slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); //stat headings
 
 
 //Fonts
 $font-size: 15px;
-$font-family-2: 'Inter', sans-serif;
+$font-family-1: 'Inter', sans-serif;
 $font-family-2: 'Lexend Deca', sans-serif;
 $fw-regular: 400;
 $fw-bold: 700;
+
+@mixin border {
+    border: 1px solid red;
+}
+
+
+body {
+    background-color: $primary-color-very-dark-blue;
+    display: grid;
+    place-items: center;
+
+    .card {
+        font-family: $font-family-2;
+        color: $white;
+        background-color: $primary-color-dark-blue;
+        width: 90%;
+        height: 82%;
+        border-radius: 0.5rem;
+        overflow: auto;
+
+        .content {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            width: 81%;
+            height: 60%;
+            margin: 1.7rem auto;
+
+            .heading {
+                font-size: 1.85rem;
+                line-height: 1.1;
+                color: $white;
+                margin-top: -1.2rem;
+
+                .insights {
+                    color: $primary-color-soft-voilet;
+                }
+            }
+
+            .details {
+                color: $slightly-transparent-white-2;
+                font-size: $font-size;
+                margin-top: -1.4rem;
+            }
+
+            .info {
+                display: grid;
+                gap: 1rem;
+                
+                .number {
+                    color: $white;
+                    font-family: $font-family-1;
+                }
+    
+                .numberOf {
+                    color: $slightly-transparent-white-2;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+            }
+            
+        }
+    }
+}
