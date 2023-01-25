@@ -1,4 +1,5 @@
 # Frontend Mentor - Stats preview card component
+# Solved by Md1amiin (Mohamed Abdilah Musa)
 
 ![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
